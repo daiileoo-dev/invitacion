@@ -7,21 +7,31 @@
     <style>
         html, body {
             margin: 0;
+            padding: 0;
             height: 100%;
-            background-color: #f8f8f8; /* Color de fondo opcional */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
         }
-        embed {
-            width: 90vw; /* 90% del ancho de la pantalla */
-            height: 95vh; /* 95% del alto de la pantalla */
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        iframe {
+            width: 100%;
+            border: none;
+        }
+
+        /* Estilo para pantallas grandes (computadoras) */
+        @media (min-width: 768px) {
+            iframe {
+                height: 100vh;  /* Se ajusta al alto de la pantalla */
+            }
+        }
+
+        /* Estilo para pantallas pequeñas (celulares) */
+        @media (max-width: 767px) {
+            iframe {
+                height: 150vh;  /* Se ajusta al alto de la pantalla y muestra más de una página */
+            }
         }
     </style>
 </head>
 <body>
-    <embed src="Invitacion.pdf" type="application/pdf">
+    <iframe src="Invitacion.pdf#page=1&view=fitH&toolbar=0&navpanes=0&scrollbar=0"></iframe>
 </body>
 </html>
