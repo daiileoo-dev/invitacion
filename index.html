@@ -13,6 +13,7 @@
         }
         iframe {
             width: 100%;
+            height: 100%;
             border: none;
         }
 
@@ -26,12 +27,12 @@
         /* Estilo para pantallas pequeñas (celulares) */
         @media (max-width: 767px) {
             iframe {
-                height: 150vh;  /* Se ajusta al alto de la pantalla y muestra más de una página */
+                height: 200vh;  /* Aumentamos la altura para permitir ver más contenido */
             }
         }
     </style>
 </head>
 <body>
-    <iframe src="Invitacion.pdf#page=1&view=fitH&toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    <iframe src="Invitacion.pdf#page=1&view=fitH&zoom=100&toolbar=0&navpanes=0&scrollbar=0"></iframe>
 </body>
 </html>
