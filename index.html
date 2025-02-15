@@ -10,29 +10,34 @@
             padding: 0;
             height: 100%;
             width: 100%;
+            overflow: hidden;
+            background-color: #f8f8f8;
         }
-        iframe {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             width: 100%;
-            height: 100%;
-            border: none;
+            height: 100vh; /* Altura total de la pantalla */
+            overflow-y: auto; /* Desplazamiento si es necesario */
         }
-
-        /* Estilo para pantallas grandes (computadoras) */
-        @media (min-width: 768px) {
-            iframe {
-                height: 100vh;  /* Se ajusta al alto de la pantalla */
-            }
-        }
-
-        /* Estilo para pantallas pequeñas (celulares) */
-        @media (max-width: 767px) {
-            iframe {
-                height: 200vh;  /* Aumentamos la altura para permitir ver más contenido */
-            }
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 10px 0; /* Espacio entre las imágenes */
+            object-fit: contain; /* Asegura que las imágenes no se deformen */
         }
     </style>
 </head>
 <body>
-    <iframe src="Invitacion.pdf#page=1&view=fitH&zoom=100&toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    <div class="container">
+        <img src="parte1.jpg" alt="Invitación XV Años - Parte 1">
+        <img src="parte2.jpg" alt="Invitación XV Años - Parte 2">
+        <img src="parte3.jpg" alt="Invitación XV Años - Parte 3">
+        <img src="parte4.jpg" alt="Invitación XV Años - Parte 4">
+        <img src="parte5.jpg" alt="Invitación XV Años - Parte 5">
+    </div>
 </body>
 </html>
